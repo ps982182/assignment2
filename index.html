@@ -1,0 +1,114 @@
+<!-- Simplifii training assignment 2: -->
+<!-- 
+Your Task: Create a survey form using HTML and CSS.  The form must have - 
+Name section- First Name and  Last Name. Please note that there are 2 separate fields, First Name and Last Name.
+Address section. This section has 4 fields:  street, city, state and pin code
+contact number. Only take number as input.
+A rating section,  containing 3 ratings named Quality of products received, Value for money, and Delivery (Each rating will have 3 option- Excellent, Good and Bad, only one option can be selected at a time, You can use radio buttons).
+All the fields will be required, without filling all form, user must not be able to submit the form.
+A submit button at bottom of form. 
+You must upload both Github and Netlify url. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin-left:50px;
+             background-image:url("https://images.unsplash.com/photo-1614850523060-8da1d56ae167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8&w=1000&q=80"); 
+           /* background-blend-mode: lighten; */
+         
+            background-repeat:no-repeat;
+            background-size:cover;
+           
+        }
+        label{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:rgb(55, 6, 50);
+            font-weight:700;
+        }
+        input[type='radio'] {
+transform: scale(2);
+}
+img{
+   
+    margin-top:150px;
+   margin-left:100px;
+   height:600px;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/582/353/original/vector-shopping-icon.jpg">
+</head>
+<body>
+   
+    <form action="">
+        <h2 style="text-align:center;color:rgb(16, 30, 71);font-size:40px;text-shadow:1px 1px;margin-top:40px"><b>FEEDBACK FORM</b></h2>
+        <hr style="height:2px;background-color:black;margin-top:-20px;">
+        <ul style="font-size:30px">
+       <li> <label for="name">Enter your name:- </label></li><br>
+       <ol>
+        <li><label for="fname">First Name: </label></li>
+        <input type="text" placeholder="Enter your first name" style="margin-top:30px;margin-bottom:20px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black" required><br>
+        <li><label for="lname" >Last Name: </label></li>
+        <input type="text" placeholder="Enter your last name" required style="margin-top:30px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius:12px;border:2px solid black"> </ol><br>
+        <li><label for="address">Address:- </label></li><br>
+        <ol>
+        <li><label for="street">Your street Address: </label></li>
+        <input type="text" placeholder="Enter your street address" required style="margin-top:30px;margin-bottom:20px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black"><br>
+        <li><label for="city">Choose your City: </label></li>
+       <select name="Choose your City" id="Choose your City" required style="margin-top:30px;margin-bottom:20px;width:40%;height:37px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black">
+        <option value="gzb">Ghaziabad</option>
+        <option value="agra">Agra</option>
+        <option value="lucknow">Lucknow</option>
+        <option value="kanpur">Kanpur</option>
+        <option value="varanasi">Varanasi</option>
+        <option value="meerut">Meerut</option>
+        <option value="aligarh">Aligarh</option>
+        <option value="faridabad">Faridabad</option>
+        <option value="jhansi">Jhansi</option>
+        <option value="ayodhya">Ayodhya</option>
+        <option value="sambhal">Sambhal</option>
+       
+       </select><br>
+      
+            
+       <li ><label for="state">Your state name: </label></li>
+       <input type="text" placeholder="Enter your state name" required style="margin-top:30px;margin-bottom:20px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black"><br>
+       
+       <li ><label for="pin">Enter your Pin-Code: </label><br> <input type="number" placeholder="Enter your pin-code" required style="margin-top:30px;margin-bottom:20px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black"></li></ol><br>
+       <li><label for="contact">Enter your Contact Number: </label></li>
+       <input type="number" placeholder="Enter your Contact Number" required style="margin-top:30px;margin-bottom:20px;width:40%;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black"><br>
+      
+       <li><label>Quality of Products received:- </label></li>
+       
+       <input type="radio" id="excellent" name="rating" value="excellent" required style="margin-top:30px;margin-bottom:30px;height:30px;border-top-left-radius:12px;border-bottom-right-radius: 12px;border:2px solid black">
+<label for="excellent">Excellent</label> <br>
+<input type="radio" id="good" name="rating" value="good" required style="margin-top:30px;margin-bottom:30px;height:30px">
+<label for="good">Good</label> <br>
+<input type="radio" id="bad" name="rating" value="bad" required style="margin-top:30px;height:30px">
+<label for="bad">Bad</label><br><br>
+<li><label for="value">Value for Money:- </label><br></li>
+       
+<input type="radio" id="excellent" name="rating" value="excellent" required style="margin-top:30px;margin-bottom:30px;height:30px">
+<label for="excellent">Excellent</label> <br>
+<input type="radio" id="good" name="rating" value="good" required style="margin-top:30px;margin-bottom:30px;height:30px">
+<label for="good">Good</label><br><br>
+<input type="radio" id="bad" name="rating" value="bad" required style="margin-top:30p;height:30px;margin-bottom:30px;">
+<label for="bad">Bad</label><br><br>
+<li><label for="delivery">Delivery:- </label></li>
+       
+<input type="radio" id="excellent" name="rating" value="excellent" required style="margin-top:30px;margin-bottom:30px;height:30px">
+<label for="excellent">Excellent</label> <br><br>
+<input type="radio" id="good" name="rating" value="good" required style="height:30px;margin-bottom:35px">
+<label for="good">Good</label><br>
+<input type="radio" id="bad" name="rating" value="bad" required style="margin-top:30px;height:30px">
+<label for="bad">Bad</label><br></ul>
+<input type="button" value="SUBMIT" style="margin-top:10px;margin-left:40px;font-size:20px;height:50px;width:150px;background-color:rgb(230, 136, 186);border:3px solid blue;color:rgb(116, 18, 18);font-weight:800;box-shadow:10px 16px 22px;outline:3px solid rgb(255, 255, 0);cursor:pointer;">
+
+    </form>
+
+</body>
+</html>
